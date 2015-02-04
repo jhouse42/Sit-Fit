@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yid-cv-Lyb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="0zh-9z-Hh7"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLO-xE-aNL">
                                 <rect key="frame" x="20" y="540" width="270" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
@@ -59,20 +65,39 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPr-SC-V1l">
+                                <rect key="frame" x="20" y="240" width="560" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9XC-dM-PSO"/>
+                                </constraints>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="wGd-EK-HBp" eventType="touchUpInside" id="5nv-Ad-ZpP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WMl-aX-eNw" secondAttribute="trailing" constant="20" id="3TZ-kp-AYw"/>
                             <constraint firstItem="WMl-aX-eNw" firstAttribute="width" secondItem="zLO-xE-aNL" secondAttribute="width" id="8Zq-vQ-jiG"/>
+                            <constraint firstItem="yid-cv-Lyb" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" id="9Fi-Vu-obb"/>
                             <constraint firstItem="zLO-xE-aNL" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" constant="20" id="FJZ-qe-w6Y"/>
                             <constraint firstAttribute="trailing" secondItem="pBY-YB-OGr" secondAttribute="trailing" constant="20" id="FJd-Y6-lrj"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="top" secondItem="PMQ-vl-Dex" secondAttribute="top" constant="20" id="Ftu-A2-ZPG"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="trailing" secondItem="PMQ-vl-Dex" secondAttribute="trailingMargin" constant="20" id="GAb-bb-pEG"/>
+                            <constraint firstAttribute="trailing" secondItem="xPr-SC-V1l" secondAttribute="trailing" constant="20" id="HL1-bt-kxT"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="top" secondItem="PMQ-vl-Dex" secondAttribute="topMargin" constant="20" id="IRM-T3-mX7"/>
                             <constraint firstItem="PKl-4b-Zbm" firstAttribute="top" secondItem="zLO-xE-aNL" secondAttribute="bottom" constant="20" id="JCC-x3-ynE"/>
+                            <constraint firstItem="xPr-SC-V1l" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" constant="20" id="Vkf-X6-9vy"/>
+                            <constraint firstItem="xPr-SC-V1l" firstAttribute="top" secondItem="PMQ-vl-Dex" secondAttribute="top" constant="240" id="XfB-0U-3ww"/>
+                            <constraint firstItem="yid-cv-Lyb" firstAttribute="top" secondItem="PMQ-vl-Dex" secondAttribute="top" id="bN2-0t-Tjc"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leadingMargin" constant="20" id="iac-Dx-R2s"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" constant="20" id="kCs-jg-PCO"/>
                             <constraint firstItem="PKl-4b-Zbm" firstAttribute="top" secondItem="WMl-aX-eNw" secondAttribute="bottom" constant="20" id="oW4-n5-spa"/>
+                            <constraint firstAttribute="trailing" secondItem="yid-cv-Lyb" secondAttribute="trailing" id="qEO-5v-6fN"/>
                             <constraint firstItem="WMl-aX-eNw" firstAttribute="leading" secondItem="zLO-xE-aNL" secondAttribute="trailing" constant="20" id="vAK-MB-Uc9"/>
                         </constraints>
                         <variation key="default">
@@ -84,6 +109,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="seatImageView" destination="yid-cv-Lyb" id="fxR-BE-jRr"/>
                         <outlet property="seatNameField" destination="pBY-YB-OGr" id="v2B-5B-ill"/>
                     </connections>
                 </viewController>

@@ -12,7 +12,6 @@
 		7020EECC1A815466000D0643 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EEC71A815466000D0643 /* ParseCrashReporting.framework */; };
 		7020EECD1A815466000D0643 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EEC81A815466000D0643 /* ParseFacebookUtils.framework */; };
 		7020EECE1A815466000D0643 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EEC91A815466000D0643 /* ParseUI.framework */; };
-		7020EECF1A815466000D0643 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EECA1A815466000D0643 /* Parse.framework */; };
 		7020EED41A8156FC000D0643 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EED31A8156FC000D0643 /* AudioToolbox.framework */; };
 		7020EED61A81571C000D0643 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EED51A81571C000D0643 /* MobileCoreServices.framework */; };
 		7020EED81A815729000D0643 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EED71A815729000D0643 /* CFNetwork.framework */; };
@@ -28,6 +27,7 @@
 		70BE5DD71A81175700C414F5 /* NewSeat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE5DD51A81175700C414F5 /* NewSeat.storyboard */; };
 		70BE5DDB1A8130FD00C414F5 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5DDA1A8130FD00C414F5 /* FeedTableViewController.swift */; };
 		70BE5DDD1A81314500C414F5 /* MyFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5DDC1A81314500C414F5 /* MyFeedTableViewController.swift */; };
+		70CD7D5A1A82636E00188DDB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EECA1A815466000D0643 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,12 +79,12 @@
 				7020EEDA1A815755000D0643 /* SystemConfiguration.framework in Frameworks */,
 				7020EED81A815729000D0643 /* CFNetwork.framework in Frameworks */,
 				7020EED61A81571C000D0643 /* MobileCoreServices.framework in Frameworks */,
+				70CD7D5A1A82636E00188DDB /* Parse.framework in Frameworks */,
 				7020EED41A8156FC000D0643 /* AudioToolbox.framework in Frameworks */,
 				7020EECB1A815466000D0643 /* Bolts.framework in Frameworks */,
 				7020EECC1A815466000D0643 /* ParseCrashReporting.framework in Frameworks */,
 				7020EECE1A815466000D0643 /* ParseUI.framework in Frameworks */,
 				7020EECD1A815466000D0643 /* ParseFacebookUtils.framework in Frameworks */,
-				7020EECF1A815466000D0643 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +446,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sit",
 					Fit,
+					"$(PROJECT_DIR)/Sit",
+					Fit,
+					"$(PROJECT_DIR)/Sit",
+					Fit,
 				);
 				INFOPLIST_FILE = "Sit Fit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -462,6 +466,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Sit",
+					Fit,
+					"$(PROJECT_DIR)/Sit",
+					Fit,
 					"$(PROJECT_DIR)/Sit",
 					Fit,
 				);

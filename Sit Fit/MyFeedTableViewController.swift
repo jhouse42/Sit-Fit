@@ -11,10 +11,39 @@ import UIKit
 class MyFeedTableViewController: FeedTableViewController {
 
 
-    
-    
-    
-    
+    override func refreshFeed() {
+        
+        
+        FeedData.mainData().refreshMyFeedItems { () -> () in
+            
+            self.tableView.reloadData()
+            
+        }
+        
+    }
     
 
-}
+    
+    
+    
+    
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}//END
