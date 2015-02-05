@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700C328E1A83FAFF003E835A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700C328D1A83FAFF003E835A /* MapViewController.swift */; };
+		700C328F1A83FB94003E835A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EECA1A815466000D0643 /* Parse.framework */; };
 		7020EEC41A815204000D0643 /* NewSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7020EEC31A815204000D0643 /* NewSeatViewController.swift */; };
 		7020EECB1A815466000D0643 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EEC61A815466000D0643 /* Bolts.framework */; };
 		7020EECC1A815466000D0643 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EEC71A815466000D0643 /* ParseCrashReporting.framework */; };
@@ -18,6 +20,9 @@
 		7020EEDA1A815755000D0643 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EED91A815755000D0643 /* SystemConfiguration.framework */; };
 		7020EEDC1A81576C000D0643 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EEDB1A81576C000D0643 /* libsqlite3.dylib */; };
 		7020EEDF1A815B75000D0643 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7020EEDE1A815B75000D0643 /* FeedData.swift */; };
+		70853BF51A83B3E2000AAD89 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70853BF41A83B3E2000AAD89 /* FeedCell.swift */; };
+		70853BF71A83CF3B000AAD89 /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70853BF61A83CF3B000AAD89 /* FourSquareRequest.swift */; };
+		70853BF91A83CF9D000AAD89 /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70853BF81A83CF9D000AAD89 /* VenuesTableViewController.swift */; };
 		70BE5DB01A810FB200C414F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5DAF1A810FB200C414F5 /* AppDelegate.swift */; };
 		70BE5DB21A810FB200C414F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5DB11A810FB200C414F5 /* LoginViewController.swift */; };
 		70BE5DB51A810FB200C414F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE5DB31A810FB200C414F5 /* Main.storyboard */; };
@@ -27,7 +32,6 @@
 		70BE5DD71A81175700C414F5 /* NewSeat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE5DD51A81175700C414F5 /* NewSeat.storyboard */; };
 		70BE5DDB1A8130FD00C414F5 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5DDA1A8130FD00C414F5 /* FeedTableViewController.swift */; };
 		70BE5DDD1A81314500C414F5 /* MyFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE5DDC1A81314500C414F5 /* MyFeedTableViewController.swift */; };
-		70CD7D5A1A82636E00188DDB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7020EECA1A815466000D0643 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		700C328D1A83FAFF003E835A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7020EEC31A815204000D0643 /* NewSeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSeatViewController.swift; sourceTree = "<group>"; };
 		7020EEC61A815466000D0643 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7020EEC71A815466000D0643 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		7020EED91A815755000D0643 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7020EEDB1A81576C000D0643 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7020EEDE1A815B75000D0643 /* FeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		70853BF41A83B3E2000AAD89 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		70853BF61A83CF3B000AAD89 /* FourSquareRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareRequest.swift; sourceTree = "<group>"; };
+		70853BF81A83CF9D000AAD89 /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
 		70BE5DAA1A810FB200C414F5 /* Sit Fit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sit Fit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BE5DAE1A810FB200C414F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BE5DAF1A810FB200C414F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +87,7 @@
 				7020EEDA1A815755000D0643 /* SystemConfiguration.framework in Frameworks */,
 				7020EED81A815729000D0643 /* CFNetwork.framework in Frameworks */,
 				7020EED61A81571C000D0643 /* MobileCoreServices.framework in Frameworks */,
-				70CD7D5A1A82636E00188DDB /* Parse.framework in Frameworks */,
+				700C328F1A83FB94003E835A /* Parse.framework in Frameworks */,
 				7020EED41A8156FC000D0643 /* AudioToolbox.framework in Frameworks */,
 				7020EECB1A815466000D0643 /* Bolts.framework in Frameworks */,
 				7020EECC1A815466000D0643 /* ParseCrashReporting.framework in Frameworks */,
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				7020EEDE1A815B75000D0643 /* FeedData.swift */,
+				70853BF61A83CF3B000AAD89 /* FourSquareRequest.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -187,10 +196,12 @@
 		70BE5DD81A81305D00C414F5 /* Main Feeds */ = {
 			isa = PBXGroup;
 			children = (
+				70853BF41A83B3E2000AAD89 /* FeedCell.swift */,
 				70BE5DB31A810FB200C414F5 /* Main.storyboard */,
 				70BE5DB11A810FB200C414F5 /* LoginViewController.swift */,
 				70BE5DDA1A8130FD00C414F5 /* FeedTableViewController.swift */,
 				70BE5DDC1A81314500C414F5 /* MyFeedTableViewController.swift */,
+				700C328D1A83FAFF003E835A /* MapViewController.swift */,
 			);
 			name = "Main Feeds";
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 			children = (
 				70BE5DD51A81175700C414F5 /* NewSeat.storyboard */,
 				7020EEC31A815204000D0643 /* NewSeatViewController.swift */,
+				70853BF81A83CF9D000AAD89 /* VenuesTableViewController.swift */,
 			);
 			name = "New Seat";
 			sourceTree = "<group>";
@@ -305,12 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70853BF71A83CF3B000AAD89 /* FourSquareRequest.swift in Sources */,
+				70853BF51A83B3E2000AAD89 /* FeedCell.swift in Sources */,
 				70BE5DB21A810FB200C414F5 /* LoginViewController.swift in Sources */,
+				700C328E1A83FAFF003E835A /* MapViewController.swift in Sources */,
 				70BE5DDD1A81314500C414F5 /* MyFeedTableViewController.swift in Sources */,
 				70BE5DB01A810FB200C414F5 /* AppDelegate.swift in Sources */,
 				7020EEDF1A815B75000D0643 /* FeedData.swift in Sources */,
 				7020EEC41A815204000D0643 /* NewSeatViewController.swift in Sources */,
 				70BE5DDB1A8130FD00C414F5 /* FeedTableViewController.swift in Sources */,
+				70853BF91A83CF9D000AAD89 /* VenuesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,9 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sit",
-					Fit,
+					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sit",
 					Fit,
 					"$(PROJECT_DIR)/Sit",
@@ -465,9 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sit",
-					Fit,
+					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sit",
 					Fit,
 					"$(PROJECT_DIR)/Sit",

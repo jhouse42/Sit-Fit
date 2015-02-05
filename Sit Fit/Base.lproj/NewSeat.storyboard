@@ -78,12 +78,26 @@
                                     <action selector="takePicture:" destination="wGd-EK-HBp" eventType="touchUpInside" id="5nv-Ad-ZpP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh1-2i-3NG">
+                                <rect key="frame" x="20" y="320" width="560" height="40"/>
+                                <color key="backgroundColor" red="0.04586664235" green="0.91338705570000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XF5-BO-Pny"/>
+                                </constraints>
+                                <state key="normal" title="Select Venue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FWX-j3-f1T" kind="presentation" id="dtx-1o-Xdv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WMl-aX-eNw" secondAttribute="trailing" constant="20" id="3TZ-kp-AYw"/>
                             <constraint firstItem="WMl-aX-eNw" firstAttribute="width" secondItem="zLO-xE-aNL" secondAttribute="width" id="8Zq-vQ-jiG"/>
                             <constraint firstItem="yid-cv-Lyb" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" id="9Fi-Vu-obb"/>
+                            <constraint firstAttribute="trailing" secondItem="jh1-2i-3NG" secondAttribute="trailing" constant="20" id="C9a-pG-QwK"/>
                             <constraint firstItem="zLO-xE-aNL" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" constant="20" id="FJZ-qe-w6Y"/>
                             <constraint firstAttribute="trailing" secondItem="pBY-YB-OGr" secondAttribute="trailing" constant="20" id="FJd-Y6-lrj"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="top" secondItem="PMQ-vl-Dex" secondAttribute="top" constant="20" id="Ftu-A2-ZPG"/>
@@ -96,9 +110,11 @@
                             <constraint firstItem="yid-cv-Lyb" firstAttribute="top" secondItem="PMQ-vl-Dex" secondAttribute="top" id="bN2-0t-Tjc"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leadingMargin" constant="20" id="iac-Dx-R2s"/>
                             <constraint firstItem="pBY-YB-OGr" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" constant="20" id="kCs-jg-PCO"/>
+                            <constraint firstItem="jh1-2i-3NG" firstAttribute="leading" secondItem="PMQ-vl-Dex" secondAttribute="leading" constant="20" id="klg-06-VGf"/>
                             <constraint firstItem="PKl-4b-Zbm" firstAttribute="top" secondItem="WMl-aX-eNw" secondAttribute="bottom" constant="20" id="oW4-n5-spa"/>
                             <constraint firstAttribute="trailing" secondItem="yid-cv-Lyb" secondAttribute="trailing" id="qEO-5v-6fN"/>
                             <constraint firstItem="WMl-aX-eNw" firstAttribute="leading" secondItem="zLO-xE-aNL" secondAttribute="trailing" constant="20" id="vAK-MB-Uc9"/>
+                            <constraint firstItem="jh1-2i-3NG" firstAttribute="top" secondItem="yid-cv-Lyb" secondAttribute="bottom" constant="20" id="ywi-wa-VDP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -111,22 +127,23 @@
                     <connections>
                         <outlet property="seatImageView" destination="yid-cv-Lyb" id="fxR-BE-jRr"/>
                         <outlet property="seatNameField" destination="pBY-YB-OGr" id="v2B-5B-ill"/>
+                        <outlet property="selectVenueButton" destination="jh1-2i-3NG" id="qCS-0r-cUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvS-Lq-ZCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="461" y="466"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Venues-->
         <scene sceneID="6qd-So-PDs">
             <objects>
-                <tableViewController id="Dx7-o4-Qlf" sceneMemberID="viewController">
+                <tableViewController id="Dx7-o4-Qlf" customClass="VenuesTableViewController" customModule="Sit_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Lzk-ig-13l">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BkR-9f-ktY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="venueCell" id="BkR-9f-ktY">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BkR-9f-ktY" id="0Nt-pm-8Uq">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -138,7 +155,9 @@
                             <outlet property="delegate" destination="Dx7-o4-Qlf" id="xu1-Ln-YII"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gxs-F0-nqO"/>
+                    <navigationItem key="navigationItem" title="Venues" id="gxs-F0-nqO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I2o-iC-wMM"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lb4-Gu-ghc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +166,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sGK-Gn-Mfp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FWX-j3-f1T" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="venuesNC" automaticallyAdjustsScrollViewInsets="NO" id="FWX-j3-f1T" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyD-Bb-zIt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

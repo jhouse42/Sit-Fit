@@ -1,95 +1,107 @@
 //
-//  FeedTableViewController.swift
+//  VenuesTableViewController.swift
 //  Sit Fit
 //
-//  Created by Jeanie House on 2/3/15.
+//  Created by Jeanie House on 2/5/15.
 //  Copyright (c) 2015 Jeanie House. All rights reserved.
 //
 
 import UIKit
+import CoreLocation
 
-class FeedTableViewController: UITableViewController {
+
+class VenuesTableViewController: UITableViewController, CLLocationManagerDelegate {
     
     
+    var onceToken:dispatch_once_t = 0
+    
+    var lManager = CLLocationManager()
 
     
+    var foundVenues: [AnyObject] = []
     
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        lManager.requestWhenInUseAuthorization()
+        lManager.delegate = self
+        lManager.startUpdatingLocation()
         
-//        refreshFeed()
-      
         
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    
-    func refreshFeed()  {
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
-        
-        FeedData.mainData().refreshFeedItems { () -> () in
+        dispatch_once(&onceToken) { () -> Void in
             
-            self.tableView.reloadData()
+           
+            if let location = locations.last as? CLLocation {
+                
+                
+                self.foundVenues = FourSquareRequest.requestVenuesWithLocation(location)
+            
+                self.tableView.reloadData()
+        
+            }
             
         }
         
+        lManager.stopUpdatingLocation()
+        
+        
     }
-    
-    override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-    
-         refreshFeed()
-    
-    }
-    
-    
 
-    @IBAction func addNewSeat(sender: AnyObject) {
-        
-       var newSeatSB = UIStoryboard(name: "NewSeat", bundle: nil)
-       var newSeatVC = newSeatSB.instantiateInitialViewController() as NewSeatViewController
-        
-        presentViewController(newSeatVC, animated: true, completion: nil)
-        
-        
-    }
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-
+    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
-        
-        return FeedData.mainData().feedItems.count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return foundVenues.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("feedCell", forIndexPath: indexPath) as FeedCell
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("venueCell", forIndexPath: indexPath) as UITableViewCell
 
+        let venue = foundVenues[indexPath.row] as [String:AnyObject]
+        
+        
+        cell.textLabel?.text = venue["name"] as? String
         // Configure the cell...
-        
-        
-        let seat = FeedData.mainData().feedItems[indexPath.row]
-        
-        cell.seatInfo = seat
-        
-//        cell.textLabel?.text = seat["name"] as? String
-        
-        
 
         return cell
+    }
+
+    
+    
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+         let venue = foundVenues[indexPath.row] as [String:AnyObject]
+        
+        // save the venue
+        
+        FeedData.mainData().selectedVenue = venue
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        
+        
     }
     
 
